@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoctorConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <h1>DoctorConnect</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('book')">Book Appointment</a></li>
+                <li><a href="#" onclick="showSection('consult')">Consultation</a></li>
+                <li><a href="#" onclick="showSection('records')">Medical Records</a></li>
+                <li><a href="#" onclick="showSection('login')">Login</a></li>
+                <li><a href="#" onclick="showSection('register')">Register as Doctor</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="page-section active">
+        <h2>Welcome to DoctorConnect</h2>
+        <p>Connect with top doctors across various specialties for your health consultations, anytime, anywhere.</p>
+        <button onclick="showSection('book')">Book an Appointment</button>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section id="book" class="page-section">
+        <h2>Book Your Appointment</h2>
+        <form id="appointment-form">
+            <label for="doctor">Choose Doctor:</label>
+            <select id="doctor">
+                <option value="doctor1">Dr. John Doe (Oncologist)</option>
+                <option value="doctor2">Dr. Jane Smith (Neurologist)</option>
+            </select>
+            <label for="date">Choose Date:</label>
+            <input type="date" id="date">
+            <label for="time">Choose Time:</label>
+            <input type="time" id="time">
+            <button type="submit">Confirm Appointment</button>
+        </form>
+    </section>
+
+    <!-- Consultation Section -->
+    <section id="consult" class="page-section">
+        <h2>Start Consultation</h2>
+        <button onclick="startConsultation()">Start Video Call</button>
+    </section>
+
+    <!-- Medical Records Section -->
+    <section id="records" class="page-section">
+        <h2>Your Medical Records</h2>
+        <p>Upload your records to access them anytime.</p>
+        <input type="file" id="upload-records">
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="page-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Doctor Registration Section -->
+    <section id="register" class="page-section">
+        <h2>Doctor Registration</h2>
+        <form id="registration-form">
+            <label for="doc-name">Name:</label>
+            <input type="text" id="doc-name" required>
+            <label for="specialty">Specialty:</label>
+            <input type="text" id="specialty" required>
+            <label for="sessions">Available Free Sessions:</label>
+            <input type="number" id="sessions" required>
+            <label for="fees">Consultation Fees:</label>
+            <input type="number" id="fees" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Doctor Cards (Oncologists) -->
+    <section id="oncologists" class="page-section">
+        <h2>Our Top Oncologists</h2>
+        <div class="doctor-list">
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor Image">
+                <h4>Dr. John Doe</h4>
+                <p>Oncologist</p>
+                <p>Available Sessions: 5</p>
+                <p>Fees: $100</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor Image">
+                <h4>Dr. Alice Lee</h4>
+                <p>Oncologist</p>
+                <p>Available Sessions: 4</p>
+                <p>Fees: $150</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor Image">
+                <h4>Dr. Mark Finn</h4>
+                <p>Oncologist</p>
+                <p>Available Sessions: 6</p>
+                <p>Fees: $120</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://via.placeholder.com/150" alt="Doctor Image">
+                <h4>Dr. Sarah Miller</h4>
+                <p>Oncologist</p>
+                <p>Available Sessions: 5</p>
+                <p>Fees: $140</p>
+            </div>
+            <!-- More doctor cards can be added -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 DoctorConnect. All Rights Reserved.</p>
+            <p>Main Office: 123 Health St, Wellness City</p>
+            <p>Branch: 456 Care Ave, Health Town</p>
+            <div class="footer-links">
+                <a href="https://www.paypal.com" target="_blank">PayPal</a>
+                <a href="#" onclick="showSection('login')">Sign In</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
